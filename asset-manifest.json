@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/divyarajsinh000/Live_Car_fitness/static/css/main.3f6068c5.css",
+    "main.js": "/divyarajsinh000/Live_Car_fitness/static/js/main.909cc025.js",
+    "static/js/488.de943ce9.chunk.js": "/divyarajsinh000/Live_Car_fitness/static/js/488.de943ce9.chunk.js",
+    "static/media/logo.jpg": "/divyarajsinh000/Live_Car_fitness/static/media/logo.7dfb60138b071d19a511.jpg",
+    "index.html": "/divyarajsinh000/Live_Car_fitness/index.html",
+    "main.3f6068c5.css.map": "/divyarajsinh000/Live_Car_fitness/static/css/main.3f6068c5.css.map",
+    "main.909cc025.js.map": "/divyarajsinh000/Live_Car_fitness/static/js/main.909cc025.js.map",
+    "488.de943ce9.chunk.js.map": "/divyarajsinh000/Live_Car_fitness/static/js/488.de943ce9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f6068c5.css",
+    "static/js/main.909cc025.js"
+  ]
+}
