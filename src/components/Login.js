@@ -11,7 +11,7 @@ const LoginWithOTP = ({ setIsLoggedIn }) => {
 
     const handleRequestOtp = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/request-otp', { mobileNo });
+            const response = await axios.post('https://exciting-art-production.up.railway.app/request-otp', { mobileNo });
             alert(response.data.message);
             setStep(2);
         } catch (error) {
@@ -22,7 +22,7 @@ const LoginWithOTP = ({ setIsLoggedIn }) => {
 
     const handleVerifyOtp = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/verify-otp', { mobileNo, otpCode });
+            const response = await axios.post('https://exciting-art-production.up.railway.app/verify-otp', { mobileNo, otpCode });
             alert(response.data.message);
             setIsLoggedIn(true);
             navigate('/Dashboard');

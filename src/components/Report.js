@@ -9,7 +9,7 @@ function Report() {
 
     const fetchReport = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/transactions/report', { params: filters });
+            const res = await axios.get('https://exciting-art-production.up.railway.app/transactions/report', { params: filters });
             setReport(res.data);
         } catch (error) {
             console.error(error);
@@ -18,7 +18,7 @@ function Report() {
     };
     useEffect(() => {
         axios
-            .get('http://localhost:5000/customers')
+            .get('https://exciting-art-production.up.railway.app/customers')
             .then((res) => setCustomers(res.data))
             .catch((error) => console.error('Failed to fetch customers:', error));
     }, []);

@@ -28,7 +28,7 @@ function TransactionList() {
   const handleEditTransaction = useCallback(async (e) => {
     e.preventDefault();
     try {
-        await axios.patch(`http://localhost:5000/transactions/${formData.TransactionId}`, formData);
+        await axios.patch(`https://exciting-art-production.up.railway.app/transactions/${formData.TransactionId}`, formData);
         alert('Transaction updated successfully!');
         setFormData({
             TransactionId: '',
@@ -42,7 +42,7 @@ function TransactionList() {
     }
 }, [formData]);
 const handleDeleteTransaction = useCallback((id) => {
-    axios.delete(`http://localhost:5000/transactions/${id}`)
+    axios.delete(`https://exciting-art-production.up.railway.app/transactions/${id}`)
         .then(() => {
             setTransactions(transactions.filter(transaction => transaction.TransactionId !== id));
             alert('Transaction deleted successfully');
@@ -59,14 +59,14 @@ const handleDeleteTransaction = useCallback((id) => {
         XLSX.writeFile(wb, 'transactions.xlsx');
     };
 useEffect(() => {
-    axios.get('http://localhost:5000/customers')
+    axios.get('https://exciting-art-production.up.railway.app/customers')
     .then((res) => {
         setCustomers(res.data);
     })
     .catch((err) => {
         console.error('Error fetching customer data:', err);
     });
-    axios.get('http://localhost:5000/transactions')
+    axios.get('https://exciting-art-production.up.railway.app/transactions')
         .then((res) => {
             setTransactions(res.data);
         })

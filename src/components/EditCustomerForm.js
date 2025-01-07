@@ -12,7 +12,7 @@ function EditCustomerForm() {
     useEffect(() => {
         const fetchCustomer = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/customers/${customerId}`);
+                const response = await axios.get(`https://exciting-art-production.up.railway.app/customers/${customerId}`);
                 setFormData({
                     CustomerName: response.data.CustomerName,
                     MobileNo: response.data.MobileNo,

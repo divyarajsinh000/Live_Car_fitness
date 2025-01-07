@@ -11,7 +11,7 @@ function TransactionForm() {
    
     useEffect(() => {
         axios
-            .get('http://localhost:5000/customers')
+            .get('https://exciting-art-production.up.railway.app/customers')
             .then((res) => setCustomers(res.data))
             .catch((error) => console.error('Failed to fetch customers:', error));
     }, []);
@@ -19,7 +19,7 @@ function TransactionForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/transactions', formData);
+            await axios.post('https://exciting-art-production.up.railway.app/transactions', formData);
             alert('Transaction added successfully!');
             navigate('/transactionlist')
             setFormData({ CustomerId: '', VehicleNo: '', OperationDate: '' }); // Reset form

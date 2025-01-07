@@ -10,7 +10,7 @@ function Dashboard() {
 
    
     useEffect(() => {
-        axios.get('http://localhost:5000/dashboard')
+        axios.get('https://exciting-art-production.up.railway.app/dashboard')
             .then((res) => {
                 setCount(res.data);
             })

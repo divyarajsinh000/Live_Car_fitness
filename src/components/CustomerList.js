@@ -20,7 +20,7 @@ function CustomerList() {
     // Handle deleting a customer
    // Handle deleting a customer
    const handleDeleteCustomer = useCallback((id) => {
-    axios.delete(`http://localhost:5000/customers/${id}`)
+    axios.delete(`https://exciting-art-production.up.railway.app/customers/${id}`)
         .then(() => {
             setCustomers(customers.filter(customer => customer.CustomerId !== id));
             alert('Customer deleted successfully');
@@ -34,7 +34,7 @@ function CustomerList() {
  const handleEditSubmit = useCallback(async (e) => {
     e.preventDefault();
     try {
-        await axios.patch(`http://localhost:5000/customers/${editingCustomerId}`, editData);
+        await axios.patch(`https://exciting-art-production.up.railway.app/customers/${editingCustomerId}`, editData);
         alert('Customer details updated successfully!');
         setEditingCustomerId(null);  // Close the edit form
     } catch (error) {
@@ -43,7 +43,7 @@ function CustomerList() {
     }
 }, [editingCustomerId, editData]);  // Add dependencies here
 useEffect(() => {
-    axios.get('http://localhost:5000/customers')
+    axios.get('https://exciting-art-production.up.railway.app/customers')
         .then((res) => {
             setCustomers(res.data);
         })
