@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/divyarajsinh000/Live_Car_fitness/",
   "name": "car-fitness-dashboard",
   "version": "0.1.0",
   "private": true,
@@ -40,6 +41,6 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
-  },
-  "homepage": "https://github.com/divyarajsinh000/Live_Car_fitness/"
+  }
+  
 }
